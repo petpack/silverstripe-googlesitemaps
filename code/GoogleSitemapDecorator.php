@@ -16,7 +16,7 @@ class GoogleSitemapDecorator extends SiteTreeDecorator {
 		);
 	}
 	
-	function updateCMSFields(&$fields) {
+	function updateCMSFields(FieldSet &$fields) {
 		$pagePriorities = array(
 			'' => _t('SiteTree.PRIORITYAUTOSET','Auto-set based on page depth'),
 			'-1' => _t('SiteTree.PRIORITYNOTINDEXED', "Not indexed"), // We set this to -ve one because a blank value implies auto-generation of Priority
@@ -60,7 +60,7 @@ class GoogleSitemapDecorator extends SiteTreeDecorator {
 		$labels['Priority'] = _t('SiteTree.METAPAGEPRIO', "Page Priority");
 	}
 	
-	function onAfterPublish() {
+	function onAfterPublish(&$original) {
 		GoogleSitemap::ping();
 	}
 	

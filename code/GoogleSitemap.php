@@ -23,7 +23,7 @@
 class GoogleSitemap extends Controller {
 	
 	/**
-	 * @var boolean
+	 * @var SS_Boolean
 	 */
 	protected static $enabled = true;
 	
@@ -33,12 +33,12 @@ class GoogleSitemap extends Controller {
 	protected $Pages;
 	
 	/**
-	 * @var boolean
+	 * @var SS_Boolean
 	 */
 	protected static $google_notification_enabled = false;
 	
 	/**
-	 * @var boolean
+	 * @var SS_Boolean
 	 */
 	protected static $use_show_in_search = true;
 	
